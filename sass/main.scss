@@ -1,0 +1,136 @@
+@import 'general';
+@import 'colors';
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 5em auto;
+}
+
+.card-deck {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card {
+	width: 88%;
+	padding: 4em;
+
+	.img-box {
+		// opacity: 0.9;
+		padding: 1em;
+	}
+
+	.title {
+		padding: 0.7em 0;
+		font-size: 4rem;
+		font-family: 'Big Shoulders Display', cursive;
+		text-transform: uppercase;
+		color: $xlt-gray;
+	}
+
+	.description {
+		color: $paragraphs;
+		font-size: 1.5rem;
+		line-height: 1.7;
+	}
+
+	.learn-more-btn {
+		font-family: 'Lexend Deca', sans-serif;
+		padding: 1em 2em;
+		margin-top: 1.2em;
+		border-radius: 2em;
+		border: none;
+		font-size: 1.5rem;
+		text-transform: capitalize;
+	}
+}
+
+.sedans {
+	background-color: $bright-orange;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+
+	.learn-more-btn {
+		color: $bright-orange;
+	}
+
+	.learn-more-btn:hover {
+		background-color: $bright-orange;
+		border: 2px solid $xlt-gray;
+		color: $xlt-gray;
+	}
+}
+
+.suvs {
+	background-color: $dark-cyan;
+	.learn-more-btn {
+		color: $dark-cyan;
+	}
+
+	.learn-more-btn:hover {
+		background-color: $dark-cyan;
+		border: 2px solid $xlt-gray;
+		color: $xlt-gray;
+	}
+}
+
+.luxury {
+	background-color: $xdk-cyan;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	.learn-more-btn {
+		color: $xdk-cyan;
+	}
+
+	.learn-more-btn:hover {
+		background-color: $xdk-cyan;
+		border: 2px solid $xlt-gray;
+		color: $xlt-gray;
+	}
+}
+
+@media (min-width: 1000px) {
+	.container {
+		padding: 3rem;
+	}
+
+	.card-deck {
+		flex-direction: row;
+		max-width: 103em;
+	}
+
+	.card {
+		.img-box {
+			padding: 1.5em;
+		}
+
+		.title {
+			font-size: 4.5rem;
+		}
+
+		.description {
+			min-height: 25vh;
+			font-size: 1.7rem;
+		}
+
+		.learn-more-btn {
+			padding: 1em 2em;
+			font-size: 1.72rem;
+		}
+	}
+
+	.sedans {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 1em;
+	}
+
+	.luxury {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 1em;
+	}
+}
